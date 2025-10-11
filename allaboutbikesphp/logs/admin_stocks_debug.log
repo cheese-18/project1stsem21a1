@@ -1,0 +1,3 @@
+[2025-09-30 11:50:47] Access denied for request: {"method":"GET","uri":"\/sample\/allaboutbikes\/admin_stocks.php","post":[]}
+[2025-09-30 12:04:34] Access denied for request: {"method":"GET","uri":"\/sample\/allaboutbikes\/admin_stocks.php","post":[]}
+[2025-09-30 12:07:20] INSERT OK id=0 name=sdassada price=-66666666 stock=-233232
