@@ -175,7 +175,7 @@
             <h4><i class="bi bi-telephone-fill contact-icon"></i>Call Us</h4>
             <p>+63 912 345 6789</p>
             <h4><i class="bi bi-envelope-fill contact-icon"></i>Email</h4>
-            <p>allaboutbikes@gmail.com</p>
+            <p>aab.rentandrapairs@gmail.com</p>
             <h4><i class="bi bi-geo-alt-fill contact-icon"></i>Location</h4>
             <p>Zone 5, Barangay Maligaya, Quezon City, Philippines</p>
             <h4><i class="bi bi-clock-fill contact-icon"></i>Business Hours</h4>

@@ -143,7 +143,7 @@
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
       <a class="navbar-brand" href="homepage.php">🚴 ALL ABOUT BIKES</a>
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navMenu">
@@ -221,6 +221,9 @@
   <footer class="text-center py-3">
     <p>&copy; 2025 ALL ABOUT BIKES. All rights reserved.</p>
   </footer>
+
+  <!-- Bootstrap JS (bundle includes Popper) -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
