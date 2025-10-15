@@ -72,3 +72,10 @@
 [2025-09-30 12:08:18] Login success employeeUsername='cheese18' id=1
 [2025-10-08 15:59:36] Query rows=0 for employeeUsername='sad'
 [2025-10-08 15:59:36] Login failed for employeeUsername='sad'
+[2025-10-15 06:40:17] Query rows=0 for employeeUsername='rean18'
+[2025-10-15 06:40:17] Login failed for employeeUsername='rean18'
+[2025-10-15 06:40:30] Query rows=0 for employeeUsername='rean18'
+[2025-10-15 06:40:30] Login failed for employeeUsername='rean18'
+[2025-10-15 06:50:44] Query rows=1 for employeeUsername='rean'
+[2025-10-15 06:50:44] Fetched id=101 name=Rean Coopera pos=Owner ph-start=$2y$10$KIc
+[2025-10-15 06:50:44] Login success employeeUsername='rean' id=101

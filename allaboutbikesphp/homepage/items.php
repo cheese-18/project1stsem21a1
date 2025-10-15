@@ -1,5 +1,4 @@
-<?php
-
+<?php 
 $items = [
     ["name" => "Mountain Bike XTR", "brand" => "Trek", "price" => 25999, "image" => "https://mtb.shimano.com/_assets/images/products/mtb/xtr/mtb-xtr-bike.png", "description" => "Durable aluminum frame with front suspension for off-road adventures."],
     ["name" => "Road Bike Pro", "brand" => "Giant", "price" => 34999, "image" => "https://www.roevalleycycles.co.uk/wp-content/uploads/2020/06/trek-emonda-sl-6-pro-disc-road-bike-2021-trek-black-radioactive-red-roe-valley-cycles-1.jpg", "description" => "Lightweight carbon frame and aerodynamic design for speed lovers."],
@@ -14,7 +13,6 @@ $items = [
     ["name" => "Bike Pedals Set", "brand" => "Shimano", "price" => 999, "image" => "https://i5.walmartimages.com/seo/Bike-Shop-Universal-Fit-Replacement-Platform-Bike-Pedal-Set_b38d3e52-98f8-4b33-8227-1e166387260e.91a7eea4f3ae48775d393502419e44f2.jpeg", "description" => "Durable alloy pedals with strong grip design."],
     ["name" => "Bike Tire 26x2.1", "brand" => "Maxxis", "price" => 799, "image" => "https://m.media-amazon.com/images/I/71C+mvkYZQL.jpg", "description" => "High-traction tire ideal for rough terrain and trails."]
 ];
-
 
 $search = isset($_GET['search']) ? strtolower(trim($_GET['search'])) : '';
 $filteredItems = array_filter($items, function($item) use ($search) {
@@ -31,58 +29,51 @@ $filteredItems = array_filter($items, function($item) use ($search) {
 <title>ALL ABOUT BIKES - Items</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet" />
 
 <style>
-  body { font-family: 'Nunito', sans-serif; background: linear-gradient(180deg, #fff8dc, #ffedc2, #ffd580); color:#222; }
-  .navbar { background: linear-gradient(90deg, #ff7b00, #ffb703); box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
-  .navbar-brand { font-family: 'Rajdhani', sans-serif; font-weight:700; color:#fff !important; letter-spacing:2px; }
-  .hero { background: url("https://i.pinimg.com/originals/3d/90/12/3d901264b0ab64b2a00b5b31389c8901.jpg") center/cover no-repeat; color:#fff; padding:80px 20px; text-align:center; position:relative; box-shadow: inset 0 0 80px rgba(0,0,0,0.35); }
-  .hero { background: url("https://i.pinimg.com/originals/3d/90/12/3d901264b0ab64b2a00b5b31389c8901.jpg") center/cover no-repeat; color:#fff; padding:80px 20px; text-align:center; position:relative; box-shadow: inset 0 0 80px rgba(0,0,0,0.35); }
-  .hero::after { content: ""; position:absolute; inset:0; background: rgba(0,0,0,0.55); }
-  .hero h1 { font-family: 'Rajdhani', sans-serif; font-size:2.6rem; position:relative; z-index:2; text-shadow: 0 6px 18px rgba(0,0,0,0.75); }
-  .hero p { position:relative; z-index:2; text-shadow: 0 4px 12px rgba(0,0,0,0.7); }
-  .hero .container { position: relative; z-index:2; }
-  .card-item { background: linear-gradient(180deg,#fff,#fff2cc); border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,0.1); transition:transform .25s; overflow:hidden; }
-  .card-item:hover { transform:translateY(-8px); }
-  .price { color:#fb8500; font-weight:700; }
-  .search-bar input { border-radius:50px; padding:10px 18px; }
-  .list-group-item { cursor:pointer; }
-  img.card-img-top { height:180px; object-fit:cover; }
+body { font-family: 'Nunito', sans-serif; background: linear-gradient(180deg, #fff8dc, #ffedc2, #ffd580); color:#222; }
+.navbar { background: linear-gradient(90deg, #ff7b00, #ffb703); box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
+.navbar-brand { font-family: 'Rajdhani', sans-serif; font-weight:700; color:#fff !important; letter-spacing:2px; }
+.nav-link { color:#fff !important; font-weight:600; transition:all 0.3s; }
+.nav-link:hover { color:#333 !important; background:#ffefb3; border-radius:8px; padding:6px 12px; }
+.hero { background: url("https://i.pinimg.com/originals/3d/90/12/3d901264b0ab64b2a00b5b31389c8901.jpg") center/cover no-repeat; color:#fff; padding:80px 20px; text-align:center; position:relative; box-shadow: inset 0 0 80px rgba(0,0,0,0.35); }
+.hero::after { content: ""; position:absolute; inset:0; background: rgba(0,0,0,0.55); }
+.hero h1 { font-family: 'Rajdhani', sans-serif; font-size:2.6rem; position:relative; z-index:2; text-shadow: 0 6px 18px rgba(0,0,0,0.75); }
+.hero p { position:relative; z-index:2; text-shadow: 0 4px 12px rgba(0,0,0,0.7); }
+.card-item { background: linear-gradient(180deg,#fff,#fff2cc); border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,0.1); transition:transform .25s; overflow:hidden; }
+.card-item:hover { transform:translateY(-8px); }
+.price { color:#fb8500; font-weight:700; }
+.search-bar input { border-radius:50px; padding:10px 18px; }
+.list-group-item { cursor:pointer; }
+img.card-img-top { height:180px; object-fit:cover; }
 </style>
 </head>
 <body>
 
-  <nav class="navbar navbar-dark">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-light" href="homepage.php">🚴 ALL ABOUT BIKES</a>
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link text-light" href="homepage.php">
-            <i class="bi bi-house-fill"></i> Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href="about.php">
-            <i class="bi bi-info-circle-fill"></i> About
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href="contact2.php">
-            <i class="bi bi-envelope-fill"></i> Contact
-          </a>
-        </li>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-light" href="homepage.php">🚴 ALL ABOUT BIKES</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="homepage.php"><i class="bi bi-house-fill"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="homepage.php#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact2.php"><i class="bi bi-envelope-fill"></i> Contact</a></li>
       </ul>
     </div>
-  </nav>
-  
+  </div>
+</nav>
+
 <section class="hero">
   <div class="container">
     <h1>Shop Items</h1>
     <p class="mb-0">Quality parts and accessories for every ride.</p>
   </div>
 </section>
-
 
 <div class="container py-5">
   <div class="d-flex align-items-center mb-4">
@@ -98,7 +89,6 @@ $filteredItems = array_filter($items, function($item) use ($search) {
           <?php if (!empty($search)): ?>
             <a href="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" class="btn btn-outline-secondary">Clear</a>
           <?php endif; ?>
-          <div id="suggestionsList" class="list-group position-absolute w-100" style="top:100%;left:0;z-index:1050;display:none;max-height:220px;overflow:auto;"></div>
         </div>
       </form>
     </div>
@@ -115,7 +105,7 @@ $filteredItems = array_filter($items, function($item) use ($search) {
               <div class="text-muted small mb-2"><?= htmlspecialchars($item['brand']) ?></div>
               <div class="d-flex align-items-center justify-content-between">
                 <div class="price">₱<?= number_format($item['price'], 2) ?></div>
-                <button class="btn btn-sm text-white" style="background:linear-gradient(90deg,#ff7b00,#ffb703);">Add to Cart</button>
+                <button class="btn btn-sm text-white buy-now" style="background:linear-gradient(90deg,#ff7b00,#ffb703);">Buy Now</button>
               </div>
               <p class="small text-muted mt-2 mb-0"><?= htmlspecialchars($item['description']) ?></p>
             </div>
@@ -134,44 +124,33 @@ $filteredItems = array_filter($items, function($item) use ($search) {
   <p class="mb-0">&copy; 2025 ALL ABOUT BIKES. Ride Bright, Ride Bold.</p>
 </footer>
 
-
 <script>
-const ITEMS = <?php echo json_encode(array_map(fn($it) => ['name'=>$it['name'],'brand'=>$it['brand']], $items)); ?>;
-(function(){
-  const input = document.getElementById('searchInput');
-  const list = document.getElementById('suggestionsList');
-  const seen = new Set(); const all = [];
-  ITEMS.forEach(it => {
-    ['name','brand'].forEach(k => {
-      const v = (it[k]||'').trim();
-      if(v && !seen.has(v)) { seen.add(v); all.push(v); }
+document.querySelectorAll('.buy-now').forEach(btn => {
+  btn.addEventListener('click', () => {
+    Swal.fire({
+      icon: 'warning',
+      title: 'Proceed to Checkout?',
+      text: 'Please review your bike selection before continuing.',
+      background: '#ffffff',
+      color: '#000',
+      showCancelButton: true,
+      confirmButtonColor: '#ff7b00',
+      cancelButtonColor: '#4b4b4b',
+      confirmButtonText: 'Proceed to Checkout',
+      cancelButtonText: 'Cancel',
+      customClass: {
+        popup: 'shadow-lg rounded-4',
+        title: 'fw-bold'
+      }
+    }).then(result => {
+      if (result.isConfirmed) {
+        window.location.href = 'checkout.php';
+      }
     });
   });
-
-  function renderMatches(q){
-    list.innerHTML = '';
-    if(!q){ list.style.display='none'; return; }
-    const ql = q.toLowerCase();
-    const matches = all.filter(x => x.toLowerCase().includes(ql)).slice(0,50);
-    if(matches.length === 0){ list.style.display='none'; return; }
-    matches.forEach(m => {
-      const btn = document.createElement('button');
-      btn.type='button'; btn.className='list-group-item list-group-item-action';
-      btn.textContent = m;
-      btn.addEventListener('click', ()=>{ input.value=m; list.style.display='none'; input.focus(); });
-      list.appendChild(btn);
-    });
-    list.style.display='block';
-  }
-
-  let hideTimer=null;
-  input.addEventListener('input', e=>renderMatches(e.target.value));
-  input.addEventListener('focus', e=>renderMatches(e.target.value));
-  input.addEventListener('keydown', e=>{ if(e.key==='Escape') list.style.display='none'; });
-  input.addEventListener('blur', ()=>{ hideTimer=setTimeout(()=>{ list.style.display='none'; },150); });
-  list.addEventListener('mousedown', ()=>{ if(hideTimer) clearTimeout(hideTimer); });
-})();
+});
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
