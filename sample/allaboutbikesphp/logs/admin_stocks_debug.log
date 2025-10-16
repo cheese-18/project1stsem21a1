@@ -1,0 +1,33 @@
+[2025-09-30 11:50:47] Access denied for request: {"method":"GET","uri":"\/sample\/allaboutbikes\/admin_stocks.php","post":[]}
+[2025-09-30 12:04:34] Access denied for request: {"method":"GET","uri":"\/sample\/allaboutbikes\/admin_stocks.php","post":[]}
+[2025-09-30 12:07:20] INSERT OK id=0 name=sdassada price=-66666666 stock=-233232
+[2025-10-15 07:01:45] INSERT OK id=0 name=BMX Frame price=1000 stock=21312
+[2025-10-15 07:08:35] UPDATE called, POST: {"id":"0","name":"BMX Frame","type":"Frame","brand":"BMX1","price":"1000","stock":"21312","action":"update"}
+[2025-10-15 07:08:35] Parsed update values: id=0 name=BMX Frame type=Frame brand=BMX1 price=1000 stock=21312
+[2025-10-15 07:08:49] UPDATE called, POST: {"id":"0","name":"BMX Frame","type":"Frame","brand":"BMX","price":"1000","stock":"21312","action":"update"}
+[2025-10-15 07:08:49] Parsed update values: id=0 name=BMX Frame type=Frame brand=BMX price=1000 stock=21312
+[2025-10-15 07:08:49] UPDATE called, POST: {"id":"0","name":"BMX Frame","type":"Frame","brand":"BMX","price":"1000","stock":"21312","action":"update"}
+[2025-10-15 07:08:49] Parsed update values: id=0 name=BMX Frame type=Frame brand=BMX price=1000 stock=21312
+[2025-10-15 07:08:50] UPDATE called, POST: {"id":"0","name":"BMX Frame","type":"Frame","brand":"BMX","price":"1000","stock":"21312","action":"update"}
+[2025-10-15 07:08:50] Parsed update values: id=0 name=BMX Frame type=Frame brand=BMX price=1000 stock=21312
+[2025-10-15 07:08:50] UPDATE called, POST: {"id":"0","name":"BMX Frame","type":"Frame","brand":"BMX","price":"1000","stock":"21312","action":"update"}
+[2025-10-15 07:08:50] Parsed update values: id=0 name=BMX Frame type=Frame brand=BMX price=1000 stock=21312
+[2025-10-15 07:09:17] UPDATE called, POST: {"id":"0","name":"BMX Frame","type":"Frame","brand":"BMX","price":"1000","stock":"21312","action":"update"}
+[2025-10-15 07:09:17] Parsed update values: id=0 name=BMX Frame type=Frame brand=BMX price=1000 stock=21312
+[2025-10-15 07:09:17] UPDATE called, POST: {"id":"0","name":"BMX Frame","type":"Frame","brand":"BMX","price":"1000","stock":"21312","action":"update"}
+[2025-10-15 07:09:17] Parsed update values: id=0 name=BMX Frame type=Frame brand=BMX price=1000 stock=21312
+[2025-10-15 07:09:58] UPDATE called, POST: {"id":"0","name":"BMX Frame","type":"Frame","brand":"BMX","price":"1000","stock":"21312","action":"update"}
+[2025-10-15 07:09:58] Parsed update values: id=0 name=BMX Frame type=Frame brand=BMX price=1000 stock=21312
+[2025-10-15 07:12:18] ADD called, POST: {"id":"","name":"BMX Frame","type":"Frame","brand":"BMX","price":"155","stock":"1","action":"add"}
+[2025-10-15 07:12:18] Parsed add values: name=BMX Frame type=Frame brand=BMX price=155 stock=1
+[2025-10-15 07:14:08] ADD called, POST: {"id":"","name":"rwqwsad","type":"Frame","brand":"BMX","price":"1000","stock":"123321","action":"add"}
+[2025-10-15 07:14:08] Parsed add values: name=rwqwsad type=Frame brand=BMX price=1000 stock=123321
+[2025-10-15 07:14:09] ADD called, POST: {"id":"","name":"rwqwsad","type":"Frame","brand":"BMX","price":"1000","stock":"123321","action":"add"}
+[2025-10-15 07:14:09] Parsed add values: name=rwqwsad type=Frame brand=BMX price=1000 stock=123321
+[2025-10-15 07:14:19] ADD called, POST: {"id":"","name":"rwqwsad","type":"Frame","brand":"BMX","price":"1000","stock":"123321","action":"add"}
+[2025-10-15 07:14:19] Parsed add values: name=rwqwsad type=Frame brand=BMX price=1000 stock=123321
+[2025-10-15 07:14:47] ADD called, POST: {"id":"","name":"adsada","type":"Frame","brand":"BMX","price":"","stock":"","action":"add"}
+[2025-10-15 07:14:47] Parsed add values: name=adsada type=Frame brand=BMX price=0 stock=0
+[2025-10-15 07:14:47] ADD called, POST: {"id":"","name":"adsada","type":"Frame","brand":"BMX","price":"","stock":"","action":"add"}
+[2025-10-15 07:14:47] Parsed add values: name=adsada type=Frame brand=BMX price=0 stock=0
+[2025-10-15 12:42:56] INSERT OK id=1 name=rwqwsad price=1000 stock=1111
